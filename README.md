@@ -52,6 +52,7 @@ In Jenkins:
 
 
 1. What is Jenkins?
+
 Jenkins is an open-source automation server used to automate parts of the software development process. It is the most popular tool for Continuous Integration (CI) and Continuous Delivery (CD).
 
 * Core Function: It allows developers to continuously integrate their code changes into a shared repository. Jenkins detects these changes, triggers a build, runs tests, and can deploy the application.
@@ -59,6 +60,7 @@ Jenkins is an open-source automation server used to automate parts of the softwa
 * Key Benefit: It catches errors early (fail fast) and standardizes the build process, reducing manual work and "it works on my machine" issues.
 
 2. How do you create a Jenkins job?
+
 To create a new job (often called a "Project" or "Item") in Jenkins, follow these general steps:
 
     1. Dashboard: From the Jenkins Dashboard, click on "New Item" in the top left corner.
@@ -90,6 +92,7 @@ Apache Maven is a build automation and project management tool, primarily used f
 * Build Lifecycle: It manages the compilation, testing, packaging, and deployment of code using standard "goals."
 
 4. How does Jenkins use build tools like Maven?
+
 Jenkins acts as the orchestrator, while Maven acts as the worker.
 
 * Jenkins does not know how to compile Java code natively; it delegates that task to Maven.
@@ -99,14 +102,17 @@ Jenkins acts as the orchestrator, while Maven acts as the worker.
 * Example: You might tell Jenkins to run the command mvn clean install. Jenkins will spin up a workspace, download the code, and then execute that Maven command. Maven handles the compiling and packaging, and reports the success or failure back to Jenkins.
 
 5. What is the difference between compile and package in Maven?
+
 These are two different phases in the Maven Build Lifecycle. The key thing to remember is that the lifecycle is sequential.
 
 6. Where do you configure tools in Jenkins?
+
 You configure global tools (like specific versions of Java, Maven, Git, or Gradle) in the Global Tool Configuration area.
 * Path: Dashboard $\rightarrow$ Manage Jenkins $\rightarrow$ Tools (or "Global Tool Configuration" in older versions).
 * Usage: Here you can specify the path to where Maven is installed on the Jenkins server (M2_HOME) or tell Jenkins to "Install automatically" whenever a build needs it.
 
 7. How do you debug a failed Jenkins build?
+
 Debugging is a critical skill. The standard workflow is:
 
     1. Check Console Output: This is the first and most important step. Click the failed build number and select "Console Output." Scroll to the bottom to see the specific error message (e.g., "Compilation failure," "Test failed," or "Connection timed out").
